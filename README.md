@@ -8,7 +8,7 @@ appscan-advisory-parser provides a programmatic solution to accessing the conten
 ### Installation
 
 ```
-pip install appscan_parser
+pip install appscan-advisory-parser
 ```
 
 
