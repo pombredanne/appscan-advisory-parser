@@ -33,7 +33,7 @@ class AppscanAdvisory():
                 })
 
             if advisory_root.find('testTechnicalDescription') is not None:
-                self.technical_description = advisory_root.find('testTechnicalDescription')
+                self.technical_description = advisory_root.find('testTechnicalDescription').text
 
             for cause in advisory_root.find('causes'):
                 if cause.text not in self.causes:
