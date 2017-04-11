@@ -1,22 +1,20 @@
 from lxml import etree
 
 class AppscanAdvisory():
-    id = ''
-    name = ''
-    description = ''
-    classification = {
-        'name': '',
-        'reference': '',
-    }
-    technical_description = ''
-    causes = []
-    risks = []
-    affected_products = []
-    xfid = ''
-    references = []
-    recommendations = []
-
     def __init__(self, file, contents):
+        self.name = ''
+        self.description = ''
+        self.classification = {
+            'name': '',
+            'reference': '',
+        }
+        self.technical_description = ''
+        self.causes = []
+        self.risks = []
+        self.affected_products = []
+        self.xfid = ''
+        self.references = []
+        self.recommendations = []
         self.id = file.split('/')[-1].rstrip('.xml')
         try:
             advisory_root = etree.XML(contents)
